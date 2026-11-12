@@ -1,0 +1,132 @@
+services:
+  edge_siem:
+    build:
+      context: .
+      dockerfile: edge_siem/Dockerfile
+    container_name: edge_siem_hybrid
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./edge_siem/logs:/app/logs
+
+  vehicle1_onboard:
+    build:
+      context: .
+      dockerfile: vehicle1_onboard/Dockerfile
+    container_name: veh1_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle1_onboard/logs:/app/logs
+
+  vehicle2_onboard:
+    build:
+      context: .
+      dockerfile: vehicle2_onboard/Dockerfile
+    container_name: veh2_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle2_onboard/logs:/app/logs
+  
+  vehicle3_onboard:
+    build:
+      context: .
+      dockerfile: vehicle3_onboard/Dockerfile
+    container_name: veh3_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle3_onboard/logs:/app/logs
+    
+  vehicle4_onboard:
+    build:
+      context: .
+      dockerfile: vehicle4_onboard/Dockerfile
+    container_name: veh4_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle4_onboard/logs:/app/logs
+
+  vehicle5_onboard:
+    build:
+      context: .
+      dockerfile: vehicle5_onboard/Dockerfile
+    container_name: veh5_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle5_onboard/logs:/app/logs
+    
+  vehicle6_onboard:
+    build:
+      context: .
+      dockerfile: vehicle6_onboard/Dockerfile
+    container_name: veh6_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle6_onboard/logs:/app/logs
+
+  vehicle7_onboard:
+    build:
+      context: .
+      dockerfile: vehicle7_onboard/Dockerfile
+    container_name: veh7_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle7_onboard/logs:/app/logs
+
+  vehicle8_onboard:
+    build:
+      context: .
+      dockerfile: vehicle8_onboard/Dockerfile
+    container_name: veh8_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle8_onboard/logs:/app/logs
+
+  vehicle9_onboard:
+    build:
+      context: .
+      dockerfile: vehicle9_onboard/Dockerfile
+    container_name: veh9_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle9_onboard/logs:/app/logs
+
+  vehicle10_onboard:
+    build:
+      context: .
+      dockerfile: vehicle10_onboard/Dockerfile
+    container_name: veh10_on_board
+    depends_on:
+      - edge_siem
+    environment:
+      - MODE=hybrid
+    volumes:
+      - ./vehicle10_onboard/logs:/app/logs
+    
+    
