@@ -1,8 +1,8 @@
-# Impact analysis and runtime detection of data poisoning on GAN-based data augmentation techniques
+# Impact Analysis and Runtime Detection of Poisoning Attacks in CAVs
 
 ## Paper
 This repository contains the code associated with the following paper:
-**Poisoning Attacks against Augmented 3D Point Cloud Datasets for Connected and Autonomous Vehicles: Operational Impact and Runtime Detection with a Hybrid SIEM**
+**Runtime Detection of Poisoning Attacks against Augmented 3D Point Cloud Datasets for Connected and Autonomous Vehicles via Hybrid SIEMs**
 
 This paper is an extended version of our conference paper:
 **Assessing the Operational Impact of Poisoning Attacks over Augmented 3D Point Cloud Public Datasets for Connected and Autonomous Vehicles**, SECRYPT 2026.
